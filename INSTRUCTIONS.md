@@ -1,11 +1,11 @@
 # Introduction
-This code run a simple that Extract-Transform-Load (ETL) data pipeline. Starts extracting the data from json files and finish loading the results into cvs files.
+This is a simple code that executes a data pipeline with a extraction, transformation and loading process (ETL). Starts with the extraction of the data from jsons files and finish loading the results into cvs files.
 
-The stack of technologies used are Python, diferent Python libraries and Docker.
+The stack of technologies used were the followings: Python, different Python libraries and Docker.
 
-# Instructions for the deploy
+# Instructions for the deployment
 
-The comands you have to run to deploy the job are the followings:
+The steps you have to follow to deploy the job are the followings:
 
 1. Clone the repository.
 
@@ -16,14 +16,23 @@ The comands you have to run to deploy the job are the followings:
 docker build -t epljob -f ./deploy/Dockerfile .
 ```
 
-3. Run the job. If you are running this in Mac:
+3. Run the job.
+\
+ \
+If you are running this on Mac:
 
-```
-docker run -v ${PWD}:/output/ epljob
-```
-If you are running this in Windows:
-```
-docker run -v %cd%:/output/ epljob
-```
+    ```
+    docker run -v ${PWD}:/output/ epljob
+    ```
+    If you are running this on Windows:
+    ```
+    docker run -v %cd%:/output/ epljob
+    ```
 
-4. The results are going to be in the root folder.
+4. The results are going to be exported to the root folder.
+
+
+
+# Architecture case 
+
+The technologies applied to meet the requirements of the case, considering both batch and streaming data flow inputs are in the architecture case folder.
